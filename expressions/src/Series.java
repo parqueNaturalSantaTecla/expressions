@@ -1,9 +1,18 @@
+class Series extends Console {
 
-
-public class Serie {
-
+	public static void main(String[] args) {
+		new Series().exec();
+	}
+	
 	final int MAX = 10;
 
+	void exec() {
+		for (int i = 0; i < MAX; i++) {
+			write(i + " - " + getTerm(i));
+		}
+		writeln();
+	}
+	
 	int getTerm(int number) {
 //		return number; // en orden
 //		return number + 1; // en orden del 1 al 10
@@ -12,17 +21,6 @@ public class Serie {
 //		return number * 2; // de 2 en 2
 //		return (number + 1) * MAX; // la tabla del 10
 		return ((MAX - number - 1) / (MAX / 2)) * number + (number / (MAX / 2)) * (MAX - number - 1);
-	}
-
-	void exec() {
-		for (int i = 0; i < MAX; i++) {
-			System.out.println(i + " - " + getTerm(i));
-		}
-		System.out.println();
-	}
-
-	public static void main(String[] args) {
-		new Serie().exec();
 	}
 
 }

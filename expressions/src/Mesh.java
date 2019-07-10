@@ -1,4 +1,4 @@
-class Mesh {
+class Mesh extends Console {
 
 	public static void main(String[] args) {
 		new Mesh().exec();
@@ -7,21 +7,21 @@ class Mesh {
 	final int MAX = 15;
 	
 	void exec() {
-		System.out.print(" ");
+		write(" ");
 		for (int j = 0; j < MAX; j++) {
-			System.out.print(j % 10);
+			write(j % 10);
 		}
-		System.out.println();
+		writeln();
 		for (int i = 0; i < MAX; i++) {
-			System.out.print(i % 10);
+			write(i % 10);
 			for (int j = 0; j < MAX; j++) {
 				if (condition(i, j)) {
-					System.out.print("*");
+					write("*");
 				} else {
-					System.out.print("·");
+					write("·");
 				}
 			}
-			System.out.println();
+			writeln();
 		}
 	}
 	
