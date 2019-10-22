@@ -4,7 +4,7 @@ class Mesh extends Console {
 		new Mesh().exec();
 	}
 
-	final int MAX = 15;
+	final int MAX = 5;
 	
 	void exec() {
 		write(" ");
@@ -18,7 +18,7 @@ class Mesh extends Console {
 				if (condition(i, j)) {
 					write("*");
 				} else {
-					write("·");
+					write(" ");
 				}
 			}
 			writeln();
@@ -26,7 +26,9 @@ class Mesh extends Console {
 	}
 	
 	boolean condition(int row, int column) {
-		return row==0 && column==0; // punto en esquina superior izquierda
+//		return true;
+		return row%2==0;
+		//		return row==0 && column==0; // punto en esquina superior izquierda
 //		return row==3 && column==12; // punto particular
 //		return row==MAX/2 && column==MAX/2; // punto central
 //		return row==MAX/2; // fila
@@ -42,7 +44,7 @@ class Mesh extends Console {
 //		return row + column == 5; // paralela a diagonal inversa
 //		return row - column == 0 || row + column == MAX - 1; // aspa
 //		return row - column == 3 || row + column == MAX - 3; // aspa desplazada
-//		return row == MAX / 2 || column == MAX / 2 || row - column == 0 || row + column == MAX - 1; // ikurriña
+//		return row == MAX / 2 || column == MAX / 2 || row - column == 0 || row + column == MAX - 1; // ikurriï¿½a
 //		return (row+column)%2==0; // alternos
 //		return (row+column)%2==1; // alternos
 	}

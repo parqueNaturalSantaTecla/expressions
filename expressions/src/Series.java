@@ -11,7 +11,14 @@ class Series extends Console {
 			write(i + " - " + getTerm(i));
 		}
 		writeln();
-	}
+
+		write('a');
+		write('b');
+		write('c');
+		write('\r');
+		write('x');
+
+	}   
 	
 	int getTerm(int number) {
 //		return number; // en orden
